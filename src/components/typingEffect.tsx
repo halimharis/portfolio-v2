@@ -47,7 +47,7 @@ export function TypingEffect({
           key={index}
           style={{
             opacity: index < visibleWordCount ? 1 : 0,
-            transition: "opacity 0.4s linear",
+            transition: "opacity 0.15s linear",
             transitionDelay: `${delay}s`,
           }}
         >

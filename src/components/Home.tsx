@@ -51,7 +51,6 @@ export default function Home() {
         <TypingEffect
           text="Halim, Abdul, or maybe Haris, Call me Anything!"
           className="text-5xl"
-          delay={0.1}
         />
 
         <TypingEffect
@@ -61,7 +60,6 @@ export default function Home() {
           rewarding to build interfaces that are both beautiful and functional.
           Don't get me wrong though, I also know my way around the back-end, so
           I can handle the full web development process."
-          delay={0.2}
         />
       </StickySectionWrapper>
       <StickySectionWrapper className="bg-black text-white flex flex-col justify-center px-64 ">
