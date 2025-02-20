@@ -37,14 +37,14 @@ export default function Home() {
         <div className="absolute bottom-3 left-5 w-full flex">
           <div className="relative flex overflow-x-hidden">
             <div className="animate-marquee whitespace-nowrap">
-              <span className="text-5xl text-white opacity-60 inline-block">
+              <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
                 {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
                 &nbsp;
               </span>
             </div>
 
             <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-              <span className="text-5xl text-white opacity-60 inline-block">
+              <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
                 {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
                 &nbsp;
               </span>
@@ -56,17 +56,17 @@ export default function Home() {
         <Paragraph
           paragraph={translation_en.homePage.sectionTwo.title}
           scrollOptions={{ offset: ["0.9 end", "4 end"] }}
-          className="xl:text-4xl md:text-4xl sm:text-2xl text-xl font-oswald uppercase font-semibold"
+          className="xl:text-4xl sm:text-2xl text-xl font-oswald uppercase font-semibold"
         />
 
         <Paragraph
           paragraph={translation_en.homePage.sectionTwo.subtitle}
           scrollOptions={{ offset: ["0.9 end", "4 end"] }}
-          className="xl:text-4xl md:text-4xl sm:text-2xl text-xl font-poppins"
+          className="xl:text-4xl sm:text-2xl text-xl font-poppins"
         />
 
         <Paragraph
-          className="xl:text-3xl md:text-3xl sm:text-xl text-base tracking-normal leading-[1.2]"
+          className="xl:text-3xl sm:text-xl text-base tracking-normal leading-[1.2]"
           scrollOptions={{
             offset: isSmallScreen
               ? ["0.6 end", "1.1 end"]
