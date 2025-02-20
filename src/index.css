@@ -13,6 +13,8 @@
   --font-pridi: "Pridi";
   --font-poppins: "Poppins";
 
+  --breakpoint-xs: 480px;
+
   /* heigh */
   --spacing-fullHeight: 100vh;
 
@@ -46,21 +48,21 @@
   }
 }
 
+@utility bg-leftToRight {
+  background-image: linear-gradient(white, white);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-size: 100% 100%;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-.bg-leftToRight {
-  background-image: linear-gradient(white, white);
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-}
-
-.bg-leftToRight:hover {
-  background-size: 100% 100%;
-}
-
-.text-outline {
+@utility text-outline {
   color: var(--color-black);
   text-shadow:
     -1px -1px 0 var(--color-white),

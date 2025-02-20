@@ -15,7 +15,7 @@ export function TypingEffect({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["center end", "end 0.8"],
+    offset: ["0.6 end", "end 0.9"],
   });
 
   const words = text.split(" ");
