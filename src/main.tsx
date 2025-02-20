@@ -6,7 +6,7 @@ import Layout from "./components/Layout.tsx";
 import { ErrorBoundary } from "react-error-boundary";
 import FallbackRender from "./components/Error.tsx";
 import { PATH } from "./constants.ts";
-import Journey from "./components/journey.tsx";
+import Journey from "./components/Journey.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <ErrorBoundary FallbackComponent={FallbackRender}>
