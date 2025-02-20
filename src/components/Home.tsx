@@ -34,7 +34,7 @@ export default function Home() {
         <h1 className="text-9xl text-white max-md:text-4xl">
           {translation_en.homePage.sectionOne.subtitle}
         </h1>
-        <div className="absolute bottom-3 left-5 w-full flex">
+        <div className="absolute bottom-3 w-full flex">
           <div className="relative flex overflow-x-hidden">
             <div className="animate-marquee whitespace-nowrap">
               <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
