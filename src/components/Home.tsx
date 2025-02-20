@@ -35,7 +35,7 @@ export default function Home() {
           {translation_en.homePage.sectionOne.subtitle}
         </h1>
         <div className="absolute bottom-3 w-full flex">
-          <div className="relative flex overflow-x-hidden">
+          <div className="relative flex overflow-hidden">
             <div className="animate-marquee whitespace-nowrap">
               <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
                 {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
