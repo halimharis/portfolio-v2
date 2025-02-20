@@ -26,7 +26,7 @@ export default function Home() {
   }, [isInView, lenis, isSmallScreen]);
 
   return (
-    <div className="h-[300vh]">
+    <div className="h-[300dvh]">
       <StickySectionWrapper className="bg-black font-oswald flex justify-center items-center flex-col overflow-hidden">
         <h1 className="text-8xl text-outline max-md:text-4xl">
           {translation_en.homePage.sectionOne.title}

@@ -16,7 +16,7 @@
   --breakpoint-xs: 480px;
 
   /* heigh */
-  --spacing-fullHeight: 100vh;
+  --spacing-fullHeight: 100dvh;
 
   /* colors */
   --color-white: #f8f8f8;
