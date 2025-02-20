@@ -20,10 +20,10 @@ export default function Home() {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
 
   useEffect(() => {
-    if (isInView) {
-      console.log(lenis?.scrollTo("#section"));
+    if (isInView && !isSmallScreen) {
+      lenis?.scrollTo("#section");
     }
-  }, [isInView, lenis]);
+  }, [isInView, lenis, isSmallScreen]);
 
   return (
     <div className="h-[300vh]">
