@@ -1,6 +1,3 @@
-import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useLenis } from "lenis/react";
 import StickySectionWrapper from "./StickySectionWrapper";
 import RaizAppPhoto from "../assets/raiz-app-photo.png";
 import RaizMarketingSitePhoto from "../assets/raiz-marketing-site.png";
@@ -11,19 +8,7 @@ import { translation_en } from "../constants";
 import { useMediaQuery } from "usehooks-ts";
 
 export default function Home() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const lenis = useLenis();
-
-  const isInView = useInView(ref, { amount: 0.8 });
-
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
-
-  useEffect(() => {
-    if (isInView && !isSmallScreen) {
-      lenis?.scrollTo("#section");
-    }
-  }, [isInView, lenis, isSmallScreen]);
 
   return (
     <div className="h-[300dvh]">
@@ -52,7 +37,10 @@ export default function Home() {
           </div>
         </div>
       </StickySectionWrapper>
-      <StickySectionWrapper className="bg-white font-onest flex justify-center gap-6 flex-col xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6 text-left tracking-tight">
+      <StickySectionWrapper
+        snapScrollId="my-section"
+        className="bg-white font-onest flex justify-center gap-6 flex-col xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6 text-left tracking-tight"
+      >
         <Paragraph
           paragraph={translation_en.homePage.sectionTwo.title}
           scrollOptions={{ offset: ["0.9 end", "4 end"] }}
@@ -75,7 +63,10 @@ export default function Home() {
           paragraph={translation_en.homePage.sectionTwo.paragraph}
         />
       </StickySectionWrapper>
-      <StickySectionWrapper className="bg-black text-white flex flex-col justify-center xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6">
+      <StickySectionWrapper
+        snapScrollId="project-section"
+        className="bg-black text-white flex flex-col justify-center xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6"
+      >
         <div className="flex flex-col items-start">
           <span className="md:text-5xl text-4xl font-semibold font-oswald mb-4">
             SELECTED PROJECT
