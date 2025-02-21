@@ -24,39 +24,43 @@ export const translation_en = {
 
 export const WORKS = [
   {
-    client: "RAIZ-APP",
-    location: "Spain",
+    project: "RAIZ-APP",
     field: "Development",
     year: "Continue",
   },
   {
-    client: "Raiz Marketing Site",
-    location: "Bali, Indonesia",
+    project: "Raiz Marketing Site",
     field: "Development",
     year: "Continue",
   },
   {
-    client: "Raiz Blog",
-    location: "United Kingdom",
+    project: "Raiz Blog",
     field: "Development",
     year: 2024,
   },
   {
-    client: "Hexpharm Jaya Sparepart",
-    location: "The Netherlands",
+    project: "Hexpharm Jaya Sparepart",
     field: "Development",
     year: 2023,
   },
   {
-    client: "Base Create",
-    location: "Hong Kong",
+    project: "Hexpharm Jaya Marketing Site",
     field: "Development",
     year: 2023,
   },
   {
-    client: "AVWB",
-    location: "The Netherlands",
+    project: "Second Portfolio",
     field: "Development",
-    year: 2023,
+    year: 2022,
+  },
+  {
+    project: "Informatics Staff Websites",
+    field: "Development",
+    year: 2022,
+  },
+  {
+    project: "First Portfolio",
+    field: "Development",
+    year: 2022,
   },
 ];
