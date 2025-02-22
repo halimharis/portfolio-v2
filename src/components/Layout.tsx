@@ -1,11 +1,16 @@
 // src/components/site/Hero.tsx
 
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import ReactLenis from "lenis/react";
 import Footer from "./Footer";
+import { PageTransition } from "./PageTransition";
 
 function Layout() {
+  const { pathname } = useLocation();
+
+  console.log("haha", pathname);
+
   return (
     <ReactLenis
       options={{
@@ -13,6 +18,7 @@ function Layout() {
       }}
       root
     >
+      <PageTransition pagekey={pathname} />
       <div className="flex flex-col">
         <Navbar />
         <Outlet />

@@ -4,7 +4,7 @@ import { PATH } from "../constants";
 export default function Footer() {
   const { pathname } = useLocation();
 
-  const isWhite = pathname === PATH.JOURNEY;
+  const isWhite = pathname === PATH.WORKS;
 
   return (
     <div

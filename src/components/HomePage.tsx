@@ -7,7 +7,7 @@ import Paragraph from "./wordEffect";
 import { translation_en } from "../constants";
 import { useMediaQuery } from "usehooks-ts";
 
-export default function Home() {
+export default function HomePage() {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
 
   return (

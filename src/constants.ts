@@ -1,7 +1,6 @@
 export const PATH = {
   PROFILE: "/",
-  JOURNEY: "/experiences",
-  PROJECT: "/works",
+  WORKS: "/works",
   CONTACT: "/blogs",
 };
 
@@ -24,7 +23,7 @@ export const translation_en = {
 
 export const WORKS = [
   {
-    project: "RAIZ-APP",
+    project: "Raiz-App",
     field: "Development",
     year: "Continue",
   },
@@ -40,11 +39,6 @@ export const WORKS = [
   },
   {
     project: "Hexpharm Jaya Sparepart",
-    field: "Development",
-    year: 2023,
-  },
-  {
-    project: "Hexpharm Jaya Marketing Site",
     field: "Development",
     year: 2023,
   },

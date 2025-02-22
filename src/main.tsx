@@ -1,20 +1,20 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import Home from "./components/Home.tsx";
+import HomePage from "./components/HomePage.tsx";
 import Layout from "./components/Layout.tsx";
 import { ErrorBoundary } from "react-error-boundary";
 import FallbackRender from "./components/Error.tsx";
 import { PATH } from "./constants.ts";
-import Journey from "./components/Journey.tsx";
+import WorksPage from "./components/WorksPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <ErrorBoundary FallbackComponent={FallbackRender}>
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path={PATH.JOURNEY} element={<Journey />} />
+          <Route index element={<HomePage />} />
+          <Route path={PATH.WORKS} element={<WorksPage />} />
 
           <Route
             element={

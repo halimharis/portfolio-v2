@@ -9,7 +9,7 @@ function Navbar() {
 
   const { pathname } = useLocation();
 
-  const isWhite = pathname === PATH.JOURNEY;
+  const isWhite = pathname === PATH.WORKS;
 
   return (
     <motion.div
