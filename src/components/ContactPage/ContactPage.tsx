@@ -24,6 +24,9 @@ const ContactPage = () => {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         }
       )
+      .then(() => {
+        alert("Email sent successfully");
+      })
       .catch(() => {
         alert("Failed to send an email, Please contact me directly");
       });
