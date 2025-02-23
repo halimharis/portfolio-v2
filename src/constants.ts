@@ -26,7 +26,6 @@ export const translation_en = {
   workPage: {
     title: "Driven by Passion",
     subtitle: "Defined by Results",
-    coba: "coba",
   },
 };
 
