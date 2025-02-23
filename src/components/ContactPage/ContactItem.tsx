@@ -8,7 +8,10 @@ interface IContactItem {
 
 function ContactItem({ item }: IContactItem) {
   return (
-    <a href={item.url} className="text-xl underline-animation w-fit">
+    <a
+      href={item.url}
+      className="text-xl underline-animation w-fit max-lg:text-base"
+    >
       {item.label}
     </a>
   );

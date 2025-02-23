@@ -9,8 +9,8 @@ interface IContactDetails {
 
 function ContactDetails({ section }: IContactDetails) {
   return (
-    <div className="flex flex-col gap-4">
-      <span className="uppercase text-sm font-onest text-neutral-400">
+    <div className="flex flex-col gap-4 max-lg:gap-3">
+      <span className="uppercase text-sm font-onest text-neutral-400 max-lg:text-xs">
         {section.title}
       </span>
       {section.items.map((item, index) => (

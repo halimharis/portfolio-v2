@@ -20,7 +20,7 @@ const FormItem = ({
       className={`border-white nth-1:border-t nth-last-1:border-b-0 border-b flex gap-10 py-12 w-full ${className}`}
     >
       <div className="text-neutral-500 pt-0.5">{number}</div>
-      <div className="flex flex-col text-2xl gap-3 w-full">
+      <div className="flex flex-col text-2xl gap-3 w-full max-lg:text-lg">
         <label htmlFor="name" className="font-onest">
           {label}
         </label>
