@@ -19,6 +19,10 @@ export const translation_en = {
         "I'm a web developer with a passion for ui design and animation. I love crafting beautiful and engaging user interfaces. I find it incredibly rewarding to build interfaces that are both beautiful and functional. Don't get me wrong though, I also know my way around the back-end, so I can handle the full web development process.",
     },
   },
+  contactPage: {
+    title: "SAY HELLO!",
+    subtitle: "don't need to be formal, text me anything!",
+  },
 };
 
 export const QUESTIONS = [

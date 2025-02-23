@@ -1,13 +1,15 @@
-import { CONTACT_CONTENT, QUESTIONS } from "../../constants";
+import { CONTACT_CONTENT, QUESTIONS, translation_en } from "../../constants";
 import ContactDetails from "./ContactDetails";
 import FormItem from "./FormItem";
 
 const ContactPage = () => {
   return (
     <div className="bg-black text-white min-h-dvh flex flex-col px-60 py-40 max-lg:px-6 max-xl:px-24">
-      <h1 className="font-oswald text-6xl">SAY HELLO!</h1>
+      <h1 className="font-oswald text-6xl">
+        {translation_en.contactPage.title}
+      </h1>
       <span className="text-neutral-400 font-onest">
-        don't need to be formal, text me anything!
+        {translation_en.contactPage.subtitle}
       </span>
       <div className="flex mt-24 w-full gap-32 max-lg:flex-col-reverse">
         <div className="flex flex-col grow">
