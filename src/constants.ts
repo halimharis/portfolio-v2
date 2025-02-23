@@ -64,6 +64,11 @@ export const WORKS = [
     year: "Continue",
   },
   {
+    project: "AI Code Helper for VS Code",
+    field: "Development",
+    year: 2025,
+  },
+  {
     project: "Raiz Blog",
     field: "Development",
     year: 2024,
