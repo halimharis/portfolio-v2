@@ -1,4 +1,4 @@
-import { WORKS } from "../constants";
+import { WORKS } from "../../constants";
 import WorkItem from "./WorkItem";
 
 function WorkList() {

@@ -1,10 +1,10 @@
 import StickySectionWrapper from "./StickySectionWrapper";
-import RaizAppPhoto from "../assets/raiz-app-photo.png";
-import RaizMarketingSitePhoto from "../assets/raiz-marketing-site.png";
-import RaizBlogPhoto from "../assets/raiz-blog.png";
+import RaizAppPhoto from "../../assets/raiz-app-photo.png";
+import RaizMarketingSitePhoto from "../../assets/raiz-marketing-site.png";
+import RaizBlogPhoto from "../../assets/raiz-blog.png";
 import ProjectItem from "./ProjectItem";
 import Paragraph from "./wordEffect";
-import { translation_en } from "../constants";
+import { translation_en } from "../../constants";
 import { useMediaQuery } from "usehooks-ts";
 
 export default function HomePage() {

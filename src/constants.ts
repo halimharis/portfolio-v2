@@ -1,7 +1,7 @@
 export const PATH = {
   PROFILE: "/",
   WORKS: "/works",
-  CONTACT: "/blogs",
+  CONTACT: "/contact",
 };
 
 export const translation_en = {
@@ -20,6 +20,29 @@ export const translation_en = {
     },
   },
 };
+
+export const QUESTIONS = [
+  {
+    label: "What's Your Name?",
+    placeholder: "Haris Halim",
+  },
+  {
+    label: "What's Your Email?",
+    placeholder: "haris@halim.com",
+  },
+  {
+    label: "What's Your Phone Number?",
+    placeholder: "+62 123456789",
+  },
+  {
+    label: "What services are you looking for?",
+    placeholder: "Web Development, Web Design",
+  },
+  {
+    label: "Tell us more about your project",
+    placeholder: "Hi, can you help me with...",
+  },
+];
 
 export const WORKS = [
   {
@@ -56,5 +79,30 @@ export const WORKS = [
     project: "First Portfolio",
     field: "Development",
     year: 2022,
+  },
+];
+
+export interface ContactItemType {
+  label: string;
+  url: string;
+}
+
+export interface ContactSectionType {
+  title: string;
+  items: ContactItemType[];
+}
+
+export const CONTACT_CONTENT: ContactSectionType[] = [
+  {
+    title: "Contact Details",
+    items: [{ label: "Email", url: "mailto:halimharis15@gmail.com" }],
+  },
+  {
+    title: "Socials",
+    items: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/halimharis/" },
+      { label: "Github", url: "https://github.com/halimharis" },
+      { label: "Instagram", url: "https://www.instagram.com/halimmharis/" },
+    ],
   },
 ];

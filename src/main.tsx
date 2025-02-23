@@ -1,12 +1,13 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import HomePage from "./components/HomePage.tsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout.tsx";
 import { ErrorBoundary } from "react-error-boundary";
-import FallbackRender from "./components/Error.tsx";
+import FallbackRender from "./components/ErrorPage/Error.tsx";
 import { PATH } from "./constants.ts";
-import WorksPage from "./components/WorksPage.tsx";
+import ContactPage from "./components/ContactPage/ContactPage.tsx";
+import WorksPage from "./components/WorkPage/WorksPage.tsx";
+import HomePage from "./components/HomePage/HomePage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <ErrorBoundary FallbackComponent={FallbackRender}>
@@ -15,25 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path={PATH.WORKS} element={<WorksPage />} />
-
-          <Route
-            element={
-              <>
-                asdasd {/* Ini akan selalu tampil */}
-                <Outlet />{" "}
-                {/* Di sinilah komponen register/login akan muncul */}
-              </>
-            }
-          >
-            <Route path="login" element={<>login</>} />
-            <Route path="register" element={<>register</>} />
-          </Route>
-
-          <Route path="concerts">
-            <Route index element={<>concert</>} />
-            <Route path=":city" element={<>city</>} />
-            <Route path="trending" element={<>trending</>} />
-          </Route>
+          <Route path={PATH.CONTACT} element={<ContactPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

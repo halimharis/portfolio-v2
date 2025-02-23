@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { PATH } from "../constants";
+import { PATH } from "../../constants";
 import NavItem from "./NavItem";
 import { motion, useScroll, useTransform } from "framer-motion";
 
