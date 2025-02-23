@@ -33,22 +33,27 @@ export const QUESTIONS = [
   {
     label: "What's Your Name?",
     placeholder: "Haris Halim",
+    formId: "name",
   },
   {
     label: "What's Your Email?",
     placeholder: "haris@halim.com",
+    formId: "email",
   },
   {
     label: "What's Your Phone Number?",
     placeholder: "+62 123456789",
+    formId: "phone",
   },
   {
     label: "What services are you looking for?",
     placeholder: "Web Development, Web Design",
+    formId: "services",
   },
   {
     label: "Tell us more about your project",
     placeholder: "Hi, can you help me with...",
+    formId: "project",
   },
 ];
 

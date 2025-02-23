@@ -9,8 +9,6 @@ import { PageTransition } from "./PageTransition";
 function Layout() {
   const { pathname } = useLocation();
 
-  console.log("haha", pathname);
-
   return (
     <ReactLenis
       options={{

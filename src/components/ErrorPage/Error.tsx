@@ -1,5 +1,4 @@
 function FallbackRender({ error }: { error: Error }) {
-  console.log(error);
   return (
     <div role="alert">
       <p>Something went wrong:</p>
