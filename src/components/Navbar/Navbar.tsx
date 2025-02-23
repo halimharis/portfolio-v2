@@ -14,9 +14,9 @@ function Navbar() {
   return (
     <motion.div
       style={{ y }}
-      className={`fixed bg-transparent w-full top-0 z-50 flex items-center justify-center gap-5 border-b ${isWhite ? "border-b-black" : "border-b-white"} sm:overflow-hidden font-onest max-md:hidden`}
+      className={`fixed bg-transparent w-full top-0 z-50 flex items-center justify-center gap-5 border-b ${isWhite ? "border-b-black" : "border-b-white"} sm:overflow-hidden font-onest`}
     >
-      <ul className="hidden items-center text-sm font-medium uppercase sm:flex">
+      <ul className=" items-center text-sm font-medium uppercase flex">
         {Object.entries(PATH).map(([key, value]) => (
           <NavItem key={key} href={value} label={key} isWhite={isWhite} />
         ))}
