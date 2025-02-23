@@ -23,6 +23,10 @@ export const translation_en = {
     title: "SAY HELLO!",
     subtitle: "don't need to be formal, text me anything!",
   },
+  workPage: {
+    title: "Driven by Passion",
+    subtitle: "Defined by Results",
+  },
 };
 
 export const QUESTIONS = [
