@@ -1,5 +1,3 @@
-// src/components/site/Hero.tsx
-
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import ReactLenis from "lenis/react";
