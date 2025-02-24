@@ -11,58 +11,60 @@ export default function HomePage() {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
 
   return (
-    <div className="h-[300dvh]">
-      <StickySectionWrapper className="bg-black font-oswald flex justify-center items-center flex-col overflow-hidden">
-        <h1 className="text-8xl text-outline max-md:text-4xl">
-          {translation_en.homePage.sectionOne.title}
-        </h1>
-        <h1 className="text-9xl text-white max-md:text-4xl">
-          {translation_en.homePage.sectionOne.subtitle}
-        </h1>
-        <div className="absolute bottom-3 w-full flex">
-          <div className="relative flex overflow-hidden">
-            <div className="animate-marquee whitespace-nowrap">
-              <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
-                {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
-                &nbsp;
-              </span>
-            </div>
+    <>
+      <div className="h-[200dvh]">
+        <StickySectionWrapper className="sticky top-0 bg-black font-oswald flex justify-center items-center flex-col overflow-hidden">
+          <h1 className="text-8xl text-outline max-md:text-4xl">
+            {translation_en.homePage.sectionOne.title}
+          </h1>
+          <h1 className="text-9xl text-white max-md:text-4xl">
+            {translation_en.homePage.sectionOne.subtitle}
+          </h1>
+          <div className="absolute bottom-3 w-full flex">
+            <div className="relative flex overflow-hidden">
+              <div className="animate-marquee whitespace-nowrap">
+                <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
+                  {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
+                  &nbsp;
+                </span>
+              </div>
 
-            <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-              <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
-                {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
-                &nbsp;
-              </span>
+              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                <span className="text-5xl text-white opacity-60 inline-block max-md:text-3xl">
+                  {translation_en.homePage.sectionOne.paragraph} &nbsp; &#8226;
+                  &nbsp;
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </StickySectionWrapper>
-      <StickySectionWrapper
-        snapScrollId="my-section"
-        className="bg-white font-onest flex justify-center gap-6 flex-col xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6 text-left tracking-tight"
-      >
-        <Paragraph
-          paragraph={translation_en.homePage.sectionTwo.title}
-          scrollOptions={{ offset: ["0.9 end", "4 end"] }}
-          className="xl:text-4xl sm:text-2xl text-xl font-oswald uppercase font-semibold"
-        />
+        </StickySectionWrapper>
+        <StickySectionWrapper
+          snapScrollId="my-section"
+          className="sticky top-0 bg-white font-onest flex justify-center gap-6 flex-col xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6 text-left tracking-tight"
+        >
+          <Paragraph
+            paragraph={translation_en.homePage.sectionTwo.title}
+            scrollOptions={{ offset: ["0.9 end", "4 end"] }}
+            className="xl:text-4xl sm:text-2xl text-xl font-oswald uppercase font-semibold"
+          />
 
-        <Paragraph
-          paragraph={translation_en.homePage.sectionTwo.subtitle}
-          scrollOptions={{ offset: ["0.9 end", "4 end"] }}
-          className="xl:text-4xl sm:text-2xl text-xl font-poppins"
-        />
+          <Paragraph
+            paragraph={translation_en.homePage.sectionTwo.subtitle}
+            scrollOptions={{ offset: ["0.9 end", "4 end"] }}
+            className="xl:text-4xl sm:text-2xl text-xl font-poppins"
+          />
 
-        <Paragraph
-          className="xl:text-3xl sm:text-xl text-base tracking-normal leading-[1.2]"
-          scrollOptions={{
-            offset: isSmallScreen
-              ? ["0.6 end", "1.1 end"]
-              : ["0.6 end", "1.7 end"],
-          }}
-          paragraph={translation_en.homePage.sectionTwo.paragraph}
-        />
-      </StickySectionWrapper>
+          <Paragraph
+            className="xl:text-3xl sm:text-xl text-base tracking-normal leading-[1.2]"
+            scrollOptions={{
+              offset: isSmallScreen
+                ? ["0.6 end", "1.1 end"]
+                : ["0.6 end", "1.7 end"],
+            }}
+            paragraph={translation_en.homePage.sectionTwo.paragraph}
+          />
+        </StickySectionWrapper>
+      </div>
       <StickySectionWrapper
         snapScrollId="project-section"
         className="bg-black text-white flex flex-col justify-center xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6"
@@ -81,6 +83,6 @@ export default function HomePage() {
           </button>
         </div>
       </StickySectionWrapper>
-    </div>
+    </>
   );
 }
