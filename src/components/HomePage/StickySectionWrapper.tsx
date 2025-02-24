@@ -5,11 +5,7 @@ interface Props {
 }
 
 function StickySectionWrapper({ children, className }: Props) {
-  return (
-    <section className={`h-fullHeight sticky top-0 ${className}`}>
-      {children}
-    </section>
-  );
+  return <section className={`h-fullHeight ${className}`}>{children}</section>;
 }
 
 export default StickySectionWrapper;
