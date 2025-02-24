@@ -13,6 +13,7 @@ function Layout() {
     <ReactLenis
       options={{
         anchors: true,
+        touchMultiplier: 0,
       }}
       root
     >
