@@ -98,11 +98,31 @@ html {
   }
 }
 
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+}
+
 @layer base {
   @property --fade-progress {
     syntax: "<number>";
     inherits: false;
     initial-value: 0;
+  }
+
+  html,
+  body {
+    @apply no-scrollbar;
   }
 }
 
@@ -112,12 +132,6 @@ html {
   }
   to {
     opacity: 1;
-  }
-}
-
-@layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 1s ease-in;
   }
 }
 

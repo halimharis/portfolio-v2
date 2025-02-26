@@ -37,10 +37,7 @@ export default function HomePage() {
           </div>
         </div>
       </StickySectionWrapper>
-      <StickySectionWrapper
-        snapScrollId="my-section"
-        className="bg-white font-onest flex justify-center gap-6 flex-col xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6 text-left tracking-tight"
-      >
+      <StickySectionWrapper className="bg-white font-onest flex justify-center gap-6 flex-col xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6 text-left tracking-tight">
         <Paragraph
           paragraph={translation_en.homePage.sectionTwo.title}
           scrollOptions={{ offset: ["0.9 end", "4 end"] }}
@@ -63,10 +60,7 @@ export default function HomePage() {
           paragraph={translation_en.homePage.sectionTwo.paragraph}
         />
       </StickySectionWrapper>
-      <StickySectionWrapper
-        snapScrollId="project-section"
-        className="bg-black text-white flex flex-col justify-center xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6"
-      >
+      <StickySectionWrapper className="bg-black text-white flex flex-col justify-center xl:px-44 lg:px-32 md:px-24 sm:px-16 px-6">
         <div className="flex flex-col items-start">
           <span className="md:text-5xl text-4xl font-semibold font-oswald mb-4">
             SELECTED PROJECT

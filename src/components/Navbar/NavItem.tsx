@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+import { useLenis } from "lenis/react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface Props {
   href: string;
@@ -8,6 +9,8 @@ interface Props {
 
 function NavItem({ href, label, isWhite }: Props) {
   const { pathname } = useLocation();
+  const navigate = useNavigate(); // Gunakan useNavigate
+  const lenis = useLenis();
 
   const isActive = (path: string) => pathname === path;
 
@@ -23,9 +26,24 @@ function NavItem({ href, label, isWhite }: Props) {
     return `${baseClasses} ${isActive(href) ? activeClasses : inactiveClasses}`;
   }
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    if (lenis) {
+      lenis.scrollTo("top", {
+        duration: 0.5,
+        onComplete: () => {
+          navigate(href, {
+            viewTransition: true,
+          });
+        },
+      });
+    }
+  };
+
   return (
     <li>
-      <a href={href} className={getClassNames()}>
+      <a href={href} onClick={handleClick} className={getClassNames()}>
         {label}
       </a>
     </li>

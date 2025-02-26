@@ -1,27 +1,30 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
-import ReactLenis from "lenis/react";
 import Footer from "./Footer/Footer";
-import { PageTransition } from "./PageTransition";
+import { useLenis } from "lenis/react";
+import { useEffect } from "react";
 
 function Layout() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+
+  const lenis = useLenis();
+
+  useEffect(() => {
+    if (!lenis) return;
+
+    lenis.scrollTo("top", {
+      duration: 0.5,
+    });
+  }, [lenis]);
 
   return (
-    <ReactLenis
-      options={{
-        anchors: true,
-        touchMultiplier: 0,
-      }}
-      root
-    >
-      <PageTransition pagekey={pathname} />
-      <div className="flex flex-col">
-        <Navbar />
+    <>
+      <Navbar />
+      <div key={location.pathname}>
         <Outlet />
-        <Footer />
       </div>
-    </ReactLenis>
+      <Footer />
+    </>
   );
 }
 
