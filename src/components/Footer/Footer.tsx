@@ -1,10 +1,10 @@
 import { useLocation } from "react-router-dom";
-import { PATH } from "../../constants";
+import { PATHS } from "../../constants";
 
 export default function Footer() {
   const { pathname } = useLocation();
 
-  const isWhite = pathname === PATH.WORKS;
+  const isWhite = pathname === PATHS.WORKS.index;
 
   return (
     <div
@@ -22,7 +22,7 @@ export default function Footer() {
             className={`w-full h-1 ${isWhite ? "bg-white" : "bg-black"}`}
           ></div>
           <div className="flex justify-between max-md:flex-wrap max-sm:text-sm">
-            {Object.entries(PATH).map(([key, value]) => (
+            {Object.entries(PATHS).map(([key, value]) => (
               <FooterLinks
                 key={key}
                 label={key}

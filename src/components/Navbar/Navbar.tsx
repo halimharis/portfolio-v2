@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { PATH } from "../../constants";
+import { PATHS } from "../../constants";
 import NavItem from "./NavItem";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -9,7 +9,9 @@ function Navbar() {
 
   const { pathname } = useLocation();
 
-  const isWhite = pathname === PATH.WORKS;
+  const isWhite = pathname === PATHS.WORKS.index;
+
+  console.log(isWhite, pathname, PATHS.WORKS.index);
 
   return (
     <motion.div
@@ -17,8 +19,8 @@ function Navbar() {
       className={`fixed bg-transparent w-full top-0 z-50 flex items-center justify-center gap-5 border-b ${isWhite ? "border-b-black" : "border-b-white"} sm:overflow-hidden font-onest`}
     >
       <ul className=" items-center text-sm font-medium uppercase flex">
-        {Object.entries(PATH).map(([key, value]) => (
-          <NavItem key={key} href={value} label={key} isWhite={isWhite} />
+        {Object.entries(PATHS).map(([key, value]) => (
+          <NavItem key={key} href={value.index} label={key} isWhite={isWhite} />
         ))}
       </ul>
     </motion.div>

@@ -1,8 +1,15 @@
-export const PATH = {
-  PROFILE: "/",
-  WORKS: "/works",
-  CONTACT: "/contact",
-};
+export const PATHS = {
+  PROFILE: {
+    index: "/",
+  },
+  WORKS: {
+    index: "/works",
+    workId: ":workId",
+  },
+  CONTACT: {
+    index: "/contact",
+  },
+} as const;
 
 export const translation_en = {
   homePage: {
